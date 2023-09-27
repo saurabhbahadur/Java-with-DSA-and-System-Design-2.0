@@ -1,0 +1,33 @@
+Ans.1: git --version
+Ans.2: git init project
+        cd project
+Ans.3: git config --global user.name "<your name>"
+      git config --global user.email "<your email>"
+
+Ans.4: git add<file>
+
+Ans.5: git reset HEAD --<file>
+
+Ans.6: git commit -m "Commit message" 
+Ans.7: git push
+
+What is the difference between clone and pull?
+Ans."Clone" and "pull" are both Git commands used to interact with remote repositories, but they serve different purposes and are used in different contexts.
+Clone:
+
+Purpose: The git clone command is used to create a local copy of a remote Git repository. It's typically used when you want to start working on a project that you don't have a local copy of.
+
+Usage: You typically run git clone followed by the URL of the remote repository you want to clone.
+Effect: When you clone a repository, Git fetches all the files and commit history from the remote repository and creates a new local repository with the same history. It also sets up a remote reference to the original repository (usually named "origin").
+
+Frequency: You typically use git clone once per project to set up your initial local copy.
+
+Pull:
+
+Purpose: The git pull command is used to update your local repository with the latest changes from the remote repository. It's used when you already have a local copy of a repository and want to bring it up to date with any new commits made by others.
+
+Usage: You run git pull while inside your local repository. It fetches new changes from the remote repository and merges them into your current branch (by default).
+Effect: git pull combines two operations: git fetch, which retrieves new changes from the remote repository, and git merge or git rebase, which incorporates those changes into your local branch.
+
+Frequency: You use git pull as often as needed to update your local copy with the latest changes from the remote repository. It's a common operation in a collaborative development workflow.
+
