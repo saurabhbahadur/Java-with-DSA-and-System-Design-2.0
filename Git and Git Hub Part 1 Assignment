@@ -1,0 +1,34 @@
+                                                                            Git and GitHub Part 1 Assignment
+
+What is Git?
+Ans. Git is a distributed version control system (DVCS) that is widely used in software development for tracking changes in source code during the development process. It was created by Linus Torvalds in 2005 and has since become an essential tool for software developers.
+
+What do you understand by the term ‘Version Control System’?
+Ans. A Version Control System (VCS), also commonly referred to as a Source Code Management (SCM) system, is a software tool or system that helps developers manage and  track changes to their files, most commonly source code files, over time. The primary purpose of a version control system is to maintain a historical record of changes made to a project's files and to facilitate collaboration among multiple contributors, allowing them to work on the same codebase without conflicts.
+
+What is GitHub?
+Ans. GitHub is a web-based platform and hosting service that provides a range of tools and features for version control, collaboration, and software development. It is one of the most popular and widely used platforms for hosting and managing code repositories, particularly for open-source and private software projects. GitHub was founded in 2008 and has since become an integral part of the software development ecosystem.
+
+Mention some popular Git hosting services?
+Ans.GitHub , GitLab,  BitBucket, GitKraken, SourceForge, AWS Code Commit, LanuchPad Beanstalk.
+
+Different types of version Control systems?
+Ans. Centralized Version Control System (CVCS)
+      Distributed Version Control System (DVCS)
+      File-Level Version Control
+      Changeset-Based Version Control
+      Content Addressable Version Control
+      Database-Backed Version Control
+      Specialized Version Control Systems
+
+What benefits come with using GIT?
+Ans.There are several benifits like : - Version Control , Collaboration , Branching and Merging , Isolation and Experimentation , Staging area , Performance , Data Integrity, Distributed Nature , Open Source.
+
+What is a Git repository?
+Ans. A Git repository, often referred to as a "repo," is a data structure used in the Git version control system to store and manage a collection of files, along with the entire history of changes made to those files. In essence, it is a directory or folder in which a project's files and their revision history are stored.
+
+How can you initialize a repository in Git?
+Ans: Open a Terminal or Command Prompt
+    Navigate to the Directory
+    Initialize the Repository
+    Add and Commit Files
