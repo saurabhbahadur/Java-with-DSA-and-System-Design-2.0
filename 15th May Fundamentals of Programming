@@ -1,0 +1,99 @@
+                                                                                            15th May Fundamentals of Programming
+
+                            	Computer Basics
+
+
+1. What is a Computer?
+	Ans: A computer is an electronic device that processes and stores data, performs calculations, and executes tasks based on instructions provided by users or programs. It consists of hardware components such as a central processing unit (CPU), memory, storage devices, input/output interfaces, and software that controls its operations.
+
+2. What is RAM?
+	Ans: RAM, which stands for Random Access Memory, is a type of computer memory that is used to temporarily store data that the computer is currently using or processing. It is a volatile form of memory, meaning that its contents are lost when the computer is powered off or restarted
+
+3. Where is data stored in a computer?
+	Ans: CPU
+
+4. What is that input device used to type text and numbers on a document in the computer system?
+	Ans: Keyboard
+
+5. What are the output devices?
+	Ans: Output devices are: Monitor, Printer, etc.
+
+6. Which is the input device that allows a user to move the cursor or pointer on the screen?
+	Ans: Mouse
+
+7. Which language is directly understood by the computer without a translation program?
+	Ans: Machine Language or machine code, is a low-level language composed of binary digits (ones and zeros).
+
+8. What are Input devices?
+	Ans: Input devices are: Keyboard, Mouse, Joystick.
+
+
+
+	                    Fundamentals Of Java
+
+
+
+1. What is a programming language?
+Ans: A programming language is a formal system of communication that allows humans to instruct computers to perform specific tasks or operations. It consists of a set of rules, syntax, and vocabulary that programmers use to write software or computer programs.
+
+2. Why do we need a programming language?
+Ans: A programming language is essential because it provides a way for people to communicate their instructions to computers in a manner that is understandable, efficient, and organized
+
+3. Features of Java?
+Ans. Platform Independence , Object Oriented , Robust , Simple and Readable , Multithreading , Security
+
+4. What is an Object?
+Ans: Objects are instances of classes, which serve as blueprints or templates for creating objects.An object in Java is a tangible representation of something, combining data and actions that can be manipulated and interacted with in a Java program.
+
+5. What is a Class?
+Ans: A class is a blueprint or a template that defines the structure and behavior of objects.
+
+6. Explain the main Method.
+Ans. public static void main(String args[]) is the declaration of the main method in a Java class. When you run a Java program, the Java Virtual Machine (JVM) starts execution by calling this method, and any code you place within it will be executed as the entry point of your program. The args parameter allows you to access command-line arguments passed to your program, which can be useful for configuring and customizing program behavior.
+
+
+
+	                Java Variable and Datatype
+
+
+
+1. What is statically typed and Dynamically typed Programming Language?
+Ans: Statically typed: if the memory of the variable is given during the compilation time itself then such types of
+programming languages are called as “Statically typed”.
+Eg: C,C++,Java
+Dynamically typed: If the memory of the variable is given during the execution time itself then such types of
+programming languages are called as “dynamically typed”.
+Eg: Python,PHP,JavaScript
+
+2. What is the variable in Java?
+Ans: A variable is the title of a reserved region allocated in memory. In other words, it may be referred to as the
+name of a memory location.
+It is a container that holds the value while the Java Program is executed.
+
+3.How To Assign a Value To Variable?
+Ans: We use assign operator (=) to assign a value to a variable. For Example,
+a = 24;
+
+4. What are Primitive Data types in Java?
+Ans: byte, short, int, long, float, double, char, String, boolean.
+
+5. What are the Identifiers in Java?
+Ans: Identifiers in Java are symbolic names used for identification. They can be a class name, variable name,
+method name, package name, constant name, and more.
+
+6.List the Operators in Java?
+Ans: Operators in Java
+ Arithmetic Operator
+ Relational Operator
+ Logical Operator
+ Assignment Operator
+ Unary Operator
+ Bitwise Operators
+
+6. Explain about Increment and Decrement operators and give an examples
+Ans: Encrement and decrement operators in programming are used to increase or decrease the value of a variable by a fixed amount. In most programming languages, including Java, there are two common operators for this purpose:
+
+Increment Operator (++): This operator is used to increase the value of a variable by 1.
+
+Decrement Operator (--): This operator is used to decrease the value of a variable by 1.
+
