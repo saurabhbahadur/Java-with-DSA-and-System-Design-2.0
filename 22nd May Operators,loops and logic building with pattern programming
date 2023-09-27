@@ -1,0 +1,84 @@
+
+
+1. What are the Conditional Operators in Java?
+Ans: Conditional operators in Java, also known as ternary operators, are used to evaluate a boolean expression and return a value based on whether the expression is true or false. The main conditional operator in Java is the ternary operator ? :.
+
+2.What are the types of operators based on the number of operands?
+Ans: TheJe are three types of operators in Java based on the number of operands. They are
+. Unary operator
+. Binary operator
+. Ternary operator
+
+3. What is the use of Switch case in Java programming?
+Ans:In Java programming, the switch statement is a control flow construct that allows you to execute different code blocks based on the value of a single expression. It's a way to simplify decision-making when you have multiple possible conditions to consider. The switch statement evaluates the expression and then directs the program's flow to the appropriate block of code associated with the matching value or case.
+
+int day = 3;
+String dayName;
+
+switch (day) {
+    case 1:
+        dayName = "Monday";
+        break;
+    case 2:
+        dayName = "Tuesday";
+        break;
+    case 3:
+        dayName = "Wednesday";
+        break;
+    case 4:
+        dayName = "Thursday";
+        break;
+    case 5:
+        dayName = "Friday";
+        break;
+    default:
+        dayName = "Weekend";
+}
+
+System.out.println("Today is " + dayName);
+
+4. What are the priority levels of arithmetic operation in Java?
+Ans: High Priority: */% and Low priority: +-
+
+5. What are the 6onditional Statements and use of 6onditional statements in Java?
+Ans. if Statement: The if statement allows you to execute a block of code if a specified condition is true.
+if-else Statement: The if-else statement lets you execute one block of code if a condition is true and another block if the condition is false.
+if-else if-else Statement: The if-else if-else statement is used when you have multiple conditions to check. It allows you to specify multiple conditions and execute different blocks of code based on which condition is true.
+
+6. What is the syntax of if else statement?
+ans. if (condition1) {
+// block of code to be executed if condition1 is true
+} else if (condition2) {
+// block of code to be executed if the condition1 is false and condition2 is true
+} else {
+// block of code to be executed if the condition1 is false and condition2 is false
+}
+
+7. What are the 3 types of iterative statements in java?
+ans. 3 types of iterative statatents in java
+ for loop
+ while loop
+ do-while loop
+
+8. Difference Between for loop and do while loop
+Ans For Loop:
+
+In a for loop, the loop condition is checked before the loop body is executed.
+It is typically used when you know in advance how many times you want to repeat a block of code.
+The loop condition is defined within the for statement, and it consists of three parts: initialization, condition, and update. These parts are separated by semicolons.
+
+Do-While Loop:
+
+In a do-while loop, the loop body is executed at least once, and then the loop condition is checked. If the condition is true, the loop continues; otherwise, it terminates.
+It is typically used when you want to ensure that a block of code executes at least once, regardless of the initial condition.
+The loop condition is checked after the loop body
+
+9. Write a program to print numbers from 1 to 10.
+Ans. public class PrintNumbers {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
