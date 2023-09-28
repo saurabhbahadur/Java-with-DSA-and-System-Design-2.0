@@ -1,0 +1,63 @@
+What is the default value of Array for different data types?
+Ans. For Numeric Data Types (e.g., int, double, float, byte, short, long):
+      The default value for numeric data types is 0.
+    For boolean Data Type (boolean):
+    For Character Data Type (char):
+      The default value for character arrays is the null character '\u0000'.The default value for boolean arrays is false.
+    For Object Types (e.g., reference types):
+      The default value for object arrays (including arrays of reference types like classes or custom objects) is null.
+
+Can you pass the negative number in Array size?
+Ans. No, you cannot pass a negative number as the size of an array in Java. Attempting to create an array with a negative size will result in a runtime exception called NegativeArraySizeException.
+int[] myArray = new int[-5]; // This will throw a NegativeArraySizeException
+
+Where does Array stored in JVM memory ?
+Ans. In the Java Virtual Machine (JVM), arrays are stored in the heap memory. The heap is a region of memory that is allocated for the storage of objects that are created at runtime. Arrays in Java are objects, and they are created dynamically at runtime, which means they are allocated on the heap.
+
+What are the disadvantages of Array?
+Ans. Arrays in Java share many of the same disadvantages as arrays in other programming languages, but here are some specific disadvantages of arrays in Java:
+  Fixed Size
+  No Dynamic Resizing
+  Inefficient Insertion and Deletion
+  Homogenous Element
+  Lack of built-in Methods
+  Null Values
+  Static Type
+
+What is an Anonymous Array in Java ? Give an example?
+Ans. In Java, there's no concept of an "anonymous array" in the same way that there are anonymous classes or anonymous inner classes. An anonymous class is a class that doesn't have a name and is defined and instantiated in a single step. An anonymous inner class is used when you want to create an instance of a class and immediately provide a class definition for it.
+
+However, you can create and use arrays without explicitly giving them a variable name, effectively treating them in a way that might be similar to an "anonymous array." Here's an example:
+
+public class AnonymousArrayExample {
+    public static void main(String[] args) {
+        // Creating and using an "anonymous" array
+        int[] numbers = new int[] { 1, 2, 3, 4, 5 };
+
+        // Iterating through the array and printing its elements
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+    }
+}
+
+What are the different ways to traverse an Array in java?
+Ans. For and For each loop
+
+What is the difference between length and length() method Give an Examples?
+Ans.
+A) length (Array Property):
+
+length is a property of arrays in Java, and it represents the number of elements in the array. It is used to determine the size of an array.
+
+int[] numbers = { 1, 2, 3, 4, 5 };
+int arrayLength = numbers.length; // Accessing the length property of the array
+System.out.println("Array Length: " + arrayLength); // Output: Array Length: 5
+
+B) length() (String Method):
+
+length() is a method provided by the String class in Java. It is used to find the number of characters in a string, including whitespace characters.
+
+String text = "Hello, World!";
+int stringLength = text.length(); // Calling the length() method on a String
+System.out.println("String Length: " + stringLength); // Output: String Length: 13
