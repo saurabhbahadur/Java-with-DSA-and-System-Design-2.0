@@ -1,0 +1,71 @@
+How to create an object in java?
+Ans.   Define a Class: First, you need to define a class. A class is like a blueprint for objects. It defines the properties (fields) and behaviors (methods) that objects of that class will have.
+      Instantiate an Object: To create an object, you use the new keyword followed by the class constructor. 
+      Access Object Members: You can access the fields and methods of the object using the dot (.) operator.
+
+What is the use of a new keyword in Java?
+Ans. The new keyword is used to create instances (objects) of classes. When you use new, you are allocating memory for an object and initializing it by invoking the constructor of the class.
+
+What are the different types of variables in Java?
+Ans. Static , Instance and Local Variable
+
+What is the difference between Instance variables and Local variables?
+Ans. 1. Instance Variables:
+
+Declaration: Instance variables are declared within a class but outside of any method, constructor, or block. They are also known as member variables or attributes of a class.
+
+Scope: Instance variables are accessible throughout the entire class and are associated with the instance (object) of the class. Each instance of the class has its own copy of instance variables.
+
+Lifetime: The lifetime of an instance variable is tied to the lifetime of the object. It exists as long as the object exists and is reclaimed by the garbage collector when the object is no longer referenced.
+
+Default Values: Instance variables are assigned default values (e.g., 0 for numeric types, null for reference types) if they are not explicitly initialized in a constructor.
+
+Access Modifiers: You can specify access modifiers like public, private, or protected to control the visibility and access to instance variables.
+
+public class MyClass {
+    private int myInstanceVariable; // Instance variable
+
+    public void setInstanceVariable(int value) {
+        myInstanceVariable = value;
+    }
+}
+
+2. Local Variables:
+
+Declaration: Local variables are declared within a method, constructor, or block (e.g., within curly braces {}) and are only accessible within the block in which they are declared.
+
+Scope: Local variables have a limited scope and are only accessible within the block in which they are defined. They are not accessible outside of that block.
+
+Lifetime: The lifetime of a local variable is limited to the duration of the method, constructor, or block in which it is declared. Once that block exits, the local variable goes out of scope and is no longer accessible.
+
+Must Be Initialized: Local variables must be explicitly initialized before they are used, unlike instance variables, which are assigned default values if not initialized.
+
+No Access Modifiers: Local variables cannot have access modifiers like public, private, or protected because they are limited to the scope of the method or block in which they are declared.
+
+public class MyClass {
+    public void myMethod() {
+        int myLocalVariable = 42; // Local variable
+        System.out.println(myLocalVariable); // Accessible here
+    }
+    
+    public void anotherMethod() {
+        // System.out.println(myLocalVariable); // Error: Cannot access myLocalVariable here
+    }
+}
+
+
+In which area memory is allocated for instance variable and local variable?
+Ans. Instance Variable in Heap and Local Variable is in Stack
+
+What is method overloading?
+Ans. Method overloading is a feature in Java that allows you to define multiple methods in a class with the same name but with different parameters. The key distinction between these methods is the type, number, or order of their parameters. Method overloading enables you to use the same method name for related operations, making your code more readable and intuitive.
+
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public double add(double a, double b) {
+        return a + b;
+    }
+}
