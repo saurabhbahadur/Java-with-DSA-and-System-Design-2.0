@@ -1,0 +1,482 @@
+
+------------------------------------------- Encapsulation Assignment ------------------------------------------------
+
+
+1. What is Encapsulation in Java? Why is it called Data hiding?
+Ans: Encapsulation is defined as the wrapping up of data under a single unit. It is the mechanism that binds together code and the data it manipulates. Another way to think about encapsulation is, that it is a protective shield that prevents the data from being accessed by the code outside this shield. 
+
+Data Hiding: 
+It is a way of restricting the access of our data members by hiding the implementation details. The user will have no idea about the inner implementation of the class. It will not be visible to the user how the class is storing values in the variables.
+
+===============================================================================================================================
+
+2. What are the important features of Encapsulation?
+Ans: 
+Data Hiding: 
+Encapsulation hides the internal details of an object's state (data members) from the outside world. It restricts direct access to these data members by using access modifiers like private, protected, and public, allowing you to control who can modify or access the data.
+
+Access Control: 
+Encapsulation provides control over how data can be accessed and modified. You can define public methods (getters and setters) that allow controlled access to the encapsulated data. This enables you to enforce rules, validation, and security checks when interacting with the data.
+
+Modularity: 
+Encapsulation promotes modularity by bundling data and methods into a single unit (a class). This modular design simplifies the codebase and makes it more manageable, as changes to the internal implementation of a class do not affect external code that uses the class.
+
+Flexibility: 
+Encapsulation allows you to change the internal implementation of a class without affecting the external interface. This flexibility is crucial for code maintenance and evolution, as it reduces the risk of introducing bugs when making changes.
+
+Code Reusability: 
+Encapsulation encourages code reusability. Once you've defined a well-encapsulated class, you can reuse it in different parts of your code or in different projects, knowing that its behavior is consistent and reliable.
+
+==============================================================================================================================
+
+3. What are getter and setter methods in Java Explain with an example?
+Ans:
+Getter and setter methods are a pair of special methods in Java (and many other object-oriented programming languages) used to control access to the private or encapsulated data members (fields) of a class. These methods allow you to get (retrieve) and set (modify) the values of these private fields while providing a level of encapsulation and control over data access. Here's an explanation with an example:
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a new Person object
+        Person person = new Person();
+
+        // Use the setter method to set the name
+        person.setName("John Doe");
+
+        // Use the getter method to retrieve the name and print it
+        System.out.println("Name: " + person.getName());
+        
+        // Try to set an invalid name
+        person.setName(""); // This will print the error message
+    }
+}
+
+==============================================================================================================================================
+
+4. What is the use of this keyword explain with an example
+Ans:
+In Java, the this keyword is used to refer to the current instance of the class in which it is used. It is often employed to distinguish between instance variables (fields) and method parameters or local variables when they share the same name. The this keyword can also be used to call other constructors within the same class, which is particularly useful in constructor chaining. Here's an explanation with examples:
+
+public class Person {
+    private String name;
+
+    public void setName(String name) {
+        // Use 'this' to refer to the instance variable 'name' and distinguish it from the method parameter 'name'
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+============================================================================================================================================
+
+5. What is the advantage of Encapsulation?
+Ans: 
+Controlled Access: 
+Encapsulation allows you to control access to the internal state (data members or fields) of an object. By using access modifiers like private, protected, and public, you can restrict or allow access to specific data members. This control prevents unintended or unauthorized modifications, enhancing data integrity and security.
+
+Data Hiding:
+ Encapsulation is often referred to as "data hiding" because it hides the internal implementation details of a class from external code. This separation of concerns makes it easier to understand and use the class, as users don't need to know how the class works internally, only how to interact with it through its public interface.
+
+Validation and Consistency: 
+Encapsulation allows you to encapsulate data and behavior within a class. This means you can enforce validation rules and constraints when setting or modifying data through setter methods. It ensures that data remains in a consistent and valid state, reducing the chances of errors.
+
+Flexibility and Maintainability: 
+Encapsulation promotes a modular and flexible code structure. It allows you to modify the internal implementation of a class without affecting the code that uses the class. This separation of concerns makes your codebase more maintainable and adaptable to changes.
+
+Code Reusability: 
+Encapsulated classes can be reused in various parts of your code or in different projects because they provide a clear and well-defined interface. This reusability reduces code duplication and promotes a more efficient development process.
+
+Abstraction: 
+Encapsulation encourages abstraction by exposing only the essential properties and behaviors of an object. Abstraction simplifies the interaction with objects, as users only need to understand and work with the high-level interface, not the underlying complexity.
+
+Security: 
+By hiding implementation details and providing controlled access, encapsulation enhances security. It reduces the risk of unauthorized access or manipulation of sensitive data.
+
+Encapsulation Across Inheritance Hierarchies: 
+Encapsulation can be applied consistently across inheritance hierarchies. Subclasses inherit encapsulation principles from their parent classes, ensuring that encapsulation is maintained throughout the inheritance structure.
+
+Documentation and Self-Containment: 
+Encapsulated classes are typically well-documented and self-contained. They provide clear information about their public interface, making it easier for other developers to understand and use them.
+
+Reduced Complexity: 
+Encapsulation reduces the complexity of code by encapsulating related data and behavior within a class. This simplifies the usage of objects and promotes a cleaner and more understandable code structure.
+
+============================================================================================================================================
+
+6. How to achieve encapsulation in Java? Give an example?
+Ans:
+Encapsulation in Java is achieved by following a set of guidelines and best practices that involve using access modifiers, getter and setter methods, and private instance variables (fields). Here's how you can achieve encapsulation in Java, along with an example:
+
+Declare Private Fields: Declare instance variables (fields) as private. This makes them inaccessible from outside the class, ensuring data hiding.
+
+Use Getter Methods: Provide public getter methods to allow controlled read-only access to the private fields. Getter methods should return the values of these fields.
+
+Use Setter Methods: Provide public setter methods to allow controlled modification of the private fields. Setter methods should update the values of these fields after validation checks, if necessary.
+
+public class Main {
+    public static void main(String[] args) {
+        Student student = new Student();
+
+        // Using setter methods to set values
+        student.setName("Alice");
+        student.setAge(25);
+
+        // Using getter methods to retrieve values
+        String name = student.getName();
+        int age = student.getAge();
+
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+==============================================================================================================================================
+
+------------------------------------------- Constructor Assignment ---------------------------------------------
+
+==========================================================================================================================================
+
+1. What is a Constructor?
+Ans:
+In Java, Constructor is a block of codes similar to the method. It is called when an instance of the class is created. At the time of calling the constructor, memory for the object is allocated in the memory. It is a special type of method that is used to initialize the object.
+
+===========================================================================================================================
+
+2. What is Constructor Chaining?
+Ans:
+Constructor chaining is a concept in Java where one constructor of a class can call another constructor of the same class or of its parent class. It allows you to reuse initialization code and provides flexibility when creating objects with different sets of parameters. Constructor chaining can be achieved using the this() keyword to call another constructor within the same class or the super() keyword to call a constructor in the parent class.
+
+=============================================================================================================================
+
+3. Can we call a subclass constructor from a superclass constructor?
+Ans: No
+
+==============================================================================================================================================
+
+4. What happens if you keep a return type for a constructor?
+Ans: 
+In Java, constructors do not have an explicit return type. If you try to specify a return type for a constructor, you will encounter a compilation error. Java constructors are identified by their name, which is the same as the class name, and they don't return any values, not even void.
+
+class mainC
+{
+int mainC()
+{
+return 0; 
+}
+}
+
+==================================================================================================================
+
+5. What is No-arg constructor?
+Ans: Constructor without arguments is called a no arg constructor.
+Default constructor in java is always a no arg constructor.
+class Demo
+{
+public Demo()
+{
+//No arg constructor
+}
+}
+
+=============================================================================================================
+
+6. How is a No-argument constructor different from the default Constructor?
+Ans:In Java, a "no-argument constructor" and a "default constructor" are essentially the same thing. Both terms refer to a constructor that takes no arguments.
+
+No-Argument Constructor:
+
+A no-argument constructor is a constructor that you explicitly define in a class and that takes no arguments or parameters.
+It is created by the programmer to initialize an object's state in a custom way when no arguments are provided.
+public class MyClass {
+    public MyClass() {
+        // No-argument constructor
+    }
+}
+
+Default Constructor:
+
+In Java, a default constructor is a no-argument constructor that is automatically provided by the compiler if you do not explicitly define any constructors in your class.
+The default constructor takes no arguments and initializes the object with default values (e.g., null for reference types, 0 for numeric types).
+public class MyClass {
+    // Compiler generates a default constructor if no constructors are defined
+}
+
+=====================================================================================================================
+
+7. When do we need Constructor Overloading?
+Ans: In Java, constructor overloading is used when you need to create objects of a class with different initial states or when you want to provide flexibility in how objects are initialized.
+
+=========================================================================================================================
+
+8. What is Default Constructor?
+Ans:
+n Java, a default constructor is a special type of constructor that is automatically provided by the Java compiler if no other constructors are explicitly defined within a class. Here are some key characteristics of a default constructor in Java:
+
+No Parameters:
+ A default constructor is a constructor that takes no parameters or arguments. It has an empty parameter list.
+
+Automatically Generated: 
+The default constructor is automatically generated by the compiler only if there are no other constructors explicitly defined within the class.
+
+Default Initialization: 
+When the default constructor is called, it typically initializes the object's instance variables to their default values. For example, numeric data types are initialized to 0, reference types (such as objects) are initialized to null, and boolean values are initialized to false.
+
+Implicit Invocation: 
+You do not need to write code to explicitly call the default constructor. It is invoked when you create an object of the class using the new keyword without passing any arguments.
+
+=========================================================================================================================
+
+-------------------------------------------- Static Keyword Assignment ------------------------------------------------
+
+=========================================================================================================================
+
+1. Why do we need static keyword in Java Programming?
+Ans: The static keyword in Java is used to declare members (variables and methods) that belong to a class rather than to an instance of the class.
+
+Creating Class-Level Members:
+ When you declare a member as static, it becomes associated with the class itself rather than with individual instances of the class. This means there is only one copy of the static member for the entire class, shared among all instances.
+
+Accessing Members without Object Creation: 
+static members can be accessed directly using the class name, without the need to create an instance of the class. This makes them suitable for utility methods and constants.
+
+Constants:
+ You can use the static keyword to define constants in Java. Constants are typically declared as static final variables and are often used for values that should not be changed throughout the program.
+
+Utility Methods: 
+static methods are commonly used for utility functions that don't require an object's state to operate. They can be called directly on the class and are often used in libraries and frameworks.
+
+Memory Efficiency: 
+static members are stored in a separate memory location associated with the class itself, rather than being duplicated for each object instance. This can lead to memory savings when you have many instances of a class.
+
+===================================================================================================================
+
+2. What is class loading and how does the Java program actually executes?
+Ans:Class loading is a crucial step in the execution of a Java program. It is the process by which the Java Virtual Machine (JVM) loads classes (i.e., bytecode) into memory so that they can be executed.
+
+Class Loading:
+ When you run a Java program, the JVM is responsible for loading the necessary classes into memory. Class loading involves three main steps:
+
+Loading: 
+The class loader loads the bytecode of the class into memory. At this point, the bytecode is not yet executed.
+Linking:
+ The linking step involves three sub-steps: verification, preparation, and resolution.
+Verification:
+ The JVM verifies that the loaded bytecode is well-formed and doesn't violate security constraints.
+Preparation: 
+Memory is allocated for class variables and initialized with default values.
+Resolution:
+ If the class references other classes or methods, those references are resolved.
+Initialization: 
+In this step, the class's static variables are initialized, and the static initializer blocks are executed. This occurs when the class is first used in the program.
+
+===================================================================================================================
+
+3. Can we mark a local variable as static?
+Ans: no 
+
+===================================================================================================================
+
+4. Why is a static method also called a class method?
+Ans: A  static method is also commonly referred to as a "class method" because it is associated with the class itself rather than with instances or objects of the class. The term "class method" emphasizes the fact that the method is invoked on the class, not on a particular instance of the class. 
+
+===================================================================================================================
+
+5. Why is the static block executed before the main method in java?
+Ans: In Java, the static block (also known as a static initializer block) is executed before the main method because of the way the Java Virtual Machine (JVM) processes classes during their loading and initialization phases. This order of execution ensures that static resources and initializations are set up before the program's entry point (main method) is invoked. 
+
+===================================================================================================================
+
+6. What is the use of static keyword Explain with an example?
+Ans:The static keyword in Java is used to declare members (variables and methods) that belong to the class itself rather than to instances of the class.
+
+===================================================================================================================
+
+7. The difference between a static variable and instance variable is as follows:
+Ans: 
+Static Variable: 
+A static variable is associated with the class itself, not with individual instances of the class. It is shared among all instances of the class and is accessible using the class name.
+Instance Variable: 
+An instance variable is specific to each individual instance (object) of the class. Each instance has its own copy of the instance variable.
+
+===================================================================================================================
+
+8. Difference between static and non static members of a class?
+Ans:
+Static Members:
+Static members are associated with the class itself rather than with any specific instance (object) of the class.
+They are declared using the static keyword.
+There is only one copy of a static member per class, shared among all instances of the class.
+Static fields can be accessed using the class name (e.g., ClassName.staticField) without creating an instance of the class.
+Static methods can also be called using the class name, and they cannot access instance-specific data (non-static fields or methods) directly.
+Common use cases for static members include constants, utility methods, and shared resources.
+
+Non-Static (Instance) Members:
+Non-static members are associated with instances (objects) of the class.
+They are not declared with the static keyword.
+Each instance of the class has its own set of non-static members, and they can have different values in different instances.
+Non-static fields and methods are accessed using an instance of the class.
+They can access both static and non-static members of the class.
+
+===================================================================================================================
+
+------------------------------------------- Practical Assignment ---------------------------------------------
+
+===================================================================================================================
+
+1.Create a class that keeps track of the number of instances created. Implement a static
+variable and method to accomplish this.
+Sol: countInstan.java
+
+public class countInstan
+{
+
+    private static int instanceCount = 0;
+
+    public  countInstan() 
+    {
+		instanceCount++;
+	}
+
+    public static int getInstanceCount() 
+    {
+        return instanceCount;
+    }
+
+    public static void main(String[] args) 
+    {
+        countInstan c1 = new countInstan();
+        countInstan c2 = new countInstan();
+        countInstan c3 = new countInstan();
+
+        System.out.println("Number of instances created:" + countInstan.getInstanceCount());
+    }   
+}
+
+=================================================================================================================
+
+2.Write a program and create a constructor with parameters and initialise the variable using a constructor?
+Sol: paraConst.java
+
+class constu
+{
+    private String name;
+    private int id;
+
+    constu(){
+        System.out.println("default constructor");
+    }
+    constu(String name , int id){
+            this.name= name;
+            this.id = id;
+    }
+
+    void disp()
+    {
+        System.out.println(name);
+        System.out.println(id);
+    }
+}
+public class paraConst 
+{
+    public static void main(String[] args) 
+    {
+        constu con1 = new constu();
+        constu con = new constu("Saurabh" , 23);
+        con.disp();
+    }    
+}
+
+============================================================================================================================
+
+3.Use a private keyword for a variable and use setter and getter methods to initialise and print the values.
+Sol: setGetEn.java
+import java.util.Scanner;
+
+class encap
+{
+     private int id;
+
+    public void setId(int id)
+    {
+        this.id = id;
+    }
+    public int getId()
+    {
+        return id;
+    }
+}
+public class setGetEn 
+{
+    public static void main(String[] args)
+    {
+         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the id ");
+        int a = sc.nextInt();
+        
+        encap obj = new encap();
+        obj.setId(a);
+        System.out.println("The User Entered id is:" +obj.getId());
+        sc.close();    
+    }    
+}
+
+===========================================================================================================================
+
+4.Write a program to call a method without creating an object of a class?
+Sol: staMet.java
+class free
+{
+    static void disp()
+    {
+        System.out.println("This is static method");
+    }
+}
+
+public class staMet 
+{
+    public static void main(String[] args) {
+        free.disp();
+    }    
+}
+
+==============================================================================================================================
+
+5.Write a program which has static block and constructor overloading,initialise variables using constructors and print it.
+Sol:
+class combo
+{
+    private String name;
+    private int id;
+
+    combo(){
+        System.out.println("default constructor");
+    }
+    combo(String name , int id){
+            this.name= name;
+            this.id = id;
+    }
+
+    void disp()
+    {
+        System.out.println(name);
+        System.out.println(id);
+    }
+    static
+    {
+        System.out.println("This is static block");
+    }
+}
+
+public class conSta 
+{
+    public static void main(String[] args)
+    {
+        combo con1 = new combo();
+        combo con = new combo("Saurabh" , 23);
+        con.disp();
+    }    
+
+}
+
+===============================================================================================================================
