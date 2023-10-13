@@ -1,0 +1,253 @@
+
+------------------------------------------- 26th June Interface, Lambda Expression and Exception Handling in Java Assignment ------------------------------------------------
+
+===============================================================================================================================
+
+----------------------------------------------------------------- Interface Assignment --------------------------------------------------------------------------------------
+
+===============================================================================================================================
+
+1. What is an interface in Java?
+Ans:
+In Java, an interface is a programming construct that defines a contract of methods that a class must implement. It's a way to achieve abstraction and define a set of method signatures without providing an implementation.
+
+===============================================================================================================================
+
+2. Which modifiers are allowed for methods in an Interface? Explain with an example?
+Ans:
+Public: 
+All methods in an interface are implicitly public. This means that they can be accessed from any class that implements the interface.
+
+Abstract: 
+All methods in an interface are implicitly abstract. They don't have a method body and must be implemented by any class that implements the interface.
+
+Static: 
+Starting from Java 8, interfaces can have static methods. These methods are associated with the interface itself, not with any implementing class. Static methods in interfaces are used for utility methods or for providing a default implementation for methods through the "static" keyword. Static methods are not abstract and can have method bodies.
+
+==============================================================================================================================
+
+3. What is the use of interface in Java?
+Ans:
+There are many reasons to use interfaces in java. They are as follows:
+a. An interface is used to achieve full abstraction.
+b. Using interfaces is the best way to expose our project’s API to some other project.
+c. Programmers use interfaces to customise features of software differently for different objects.
+d. By using interface, we can achieve the functionality of multiple inheritance.
+
+==============================================================================================================================================
+
+4. What is the difference between abstract class and interface in Java?
+Ans:
+Method Implementation:
+
+Abstract Class:
+Abstract classes can have abstract methods (methods without a body) that must be implemented by concrete (non-abstract) subclasses. They can also have fully implemented methods. Abstract classes can provide some level of code reusability through method implementation.
+
+Interface: 
+Interfaces can only have method signatures (abstract methods) without any implementation. Any class that implements an interface must provide concrete implementations for all of its methods.
+
+Inheritance:
+
+Abstract Class: 
+A class can have only one direct superclass (single inheritance). This means a class can extend only one abstract class.
+
+Interface: 
+A class can implement multiple interfaces (multiple inheritance). This allows a class to inherit and implement the behavior defined in multiple interfaces.
+
+Constructor:
+
+Abstract Class: 
+Abstract classes can have constructors, and they are called when an instance of a concrete subclass is created.
+
+Interface:
+Interfaces cannot have constructors because they cannot be instantiated on their own.
+
+===============================================================================================================================
+
+----------------------------------------------------------------- Lambda Expression Assignment --------------------------------------------------------------------------------------
+
+===============================================================================================================================
+
+1. What is the lambda expression of Java 8?
+Ans:
+
+In Java 8, lambda expressions were introduced as a new feature to provide a concise way to express instances of single-method interfaces (functional interfaces). Lambda expressions make the code more readable and allow you to pass functions as arguments to methods, among other benefits.
+
+==============================================================================================================================================
+
+2. Can you pass lambda expressions to a method? When?
+Ans:
+Yes, you can pass lambda expressions as arguments to methods in Java. This feature is one of the main benefits of lambda expressions, allowing you to pass behavior as a parameter to a method. You can pass lambda expressions as method arguments in the following situations
+
+List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+names.forEach(name -> System.out.println(name));
+
+==============================================================================================================================================
+
+3. What is the functional interface in Java 8?
+Ans:
+In Java 8, a functional interface is an interface that has exactly one abstract method. These interfaces are also sometimes referred to as Single Abstract Method (SAM) interfaces. Functional interfaces were introduced to support the new lambda expressions and method references features in Java 8
+
+Conciseness: 
+Lambda expressions allow you to write more concise code. They reduce boilerplate code and make your code easier to read and understand. This leads to improved developer productivity and faster development.
+
+Readability: 
+Lambda expressions can make your code more readable by eliminating the need for anonymous inner classes and providing a more natural and functional style of writing code. This can lead to code that more closely resembles the problem domain it represents.
+
+Passing Behavior: 
+Lambda expressions allow you to pass behavior as an argument to methods. This enables you to write more generic and reusable code, as you can pass different behaviors to the same method, making your code more adaptable and versatile.
+
+Functional Programming: 
+Lambda expressions are a key feature in Java's support for functional programming. They allow you to treat functions as first-class citizens, which is essential for functional programming paradigms like mapping, filtering, and reducing data.
+
+Improved API Design: 
+When designing APIs, you can define functional interfaces (interfaces with a single abstract method) and use lambda expressions to implement them. This results in APIs that are more intuitive and user-friendly
+
+==============================================================================================================================================
+
+5. Is it mandatory for a lambda expression to have parameters?
+Ans:
+No, it is not mandatory for a lambda expression in Java to have parameters. A lambda expression can have zero, one, or multiple parameters, depending on the context and the functional interface it is implementing. The syntax for lambda expressions is flexible and can adapt to the number of parameters required by the target functional interface.
+
+() -> {
+    // Code without parameters
+}
+
+
+x -> {
+    // Code that uses the parameter 'x'
+}
+
+
+(x, y) -> {
+    // Code that uses both 'x' and 'y' parameters
+}
+
+
+===============================================================================================================================
+
+----------------------------------------------------------------- Exception Handling Assignment --------------------------------------------------------------------------------------
+
+===============================================================================================================================
+
+1. Explain different types of Errors in java.
+Ans: syntax error and logical error
+
+==============================================================================================================================================
+
+2. What is an Excepation in Java?
+Ans:
+
+In Java, an exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions. When an exception occurs, it may be handled by an exception handling mechanism, which allows you to gracefully respond to and recover from unexpected or erroneous situations.
+
+==============================================================================================================================================
+
+3. How can you handle exceptions in Java? Explain with an example?
+Ans:
+In Java, you can handle exceptions using the exception handling mechanism, which involves the use of try, catch, finally, and throw statements. This mechanism allows you to gracefully respond to and recover from exceptions that may occur during the execution of your program.
+
+public class ExceptionHandlingExample {
+    public static void main(String[] args) {
+        int numerator = 10;
+        int denominator = 0;
+        int result = 0;
+
+        try {
+            result = divide(numerator, denominator);
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("An ArithmeticException occurred: " + e.getMessage());
+        } finally {
+            System.out.println("Finally block executed.");
+        }
+    }
+
+    public static int divide(int numerator, int denominator) {
+        if (denominator == 0) {
+            throw new ArithmeticException("Division by zero is not allowed.");
+        }
+        return numerator / denominator;
+    }
+}
+
+==============================================================================================================================================
+
+4. Why do we need exception handling in Java?
+Ans:
+If we dont use exception handling so the code will terminate in between and not run properly.
+
+==============================================================================================================================================
+
+5. What is the difference between exception and error in Java?
+Ans:
+Exceptions are used for recoverable, application-level errors, while errors are typically related to serious issues at a system or resource level.
+
+Exceptions can be caught and handled by application code using try-catch blocks, but errors are not meant to be caught or handled. Attempting to catch or handle errors is generally discouraged.
+
+Exceptions are further categorized into checked and unchecked exceptions based on whether they must be declared or caught. Errors are not categorized in the same way.
+
+==============================================================================================================================================
+
+6. Name the different types of exceptions in Java.
+Ans:
+
+1. Checked Exceptions:
+
+IOException: Represents various I/O errors such as reading from or writing to files, streams, or sockets.
+
+SQLException: Represents exceptions related to database access and SQL operations.
+
+ClassNotFoundException: Occurs when the specified class cannot be found during class loading.
+
+InterruptedException: Thrown when a thread is interrupted while it is in a waiting, sleeping, or blocked state.
+
+ParseException: Represents issues encountered while parsing data, such as date or number formats.
+
+2. Unchecked Exceptions (Runtime Exceptions):
+
+NullPointerException: Occurs when you try to access or manipulate an object that is null.
+
+ArrayIndexOutOfBoundsException: Thrown when you attempt to access an array element with an invalid index.
+
+ArithmeticException: Occurs in arithmetic operations, such as division by zero.
+
+ClassCastException: Thrown when an attempt is made to cast an object to a subclass of which it is not an instance.
+
+IllegalArgumentException: Typically used when a method receives an invalid argument.
+
+IllegalStateException: Indicates that a method is invoked at an inappropriate time or in an inappropriate state.
+
+3. Custom Exceptions:
+
+You can create your own custom exceptions by extending the Exception class or one of its subclasses, depending on whether you want your custom exception to be checked or unchecked. Creating custom exceptions is helpful when you need to define error conditions specific to your application.
+
+==============================================================================================================================================
+
+7. Can we just use try instead of finally and catch blocks? Give an example .
+Ans: 
+
+No, you cannot use only the try block without either a catch or a finally block in Java. The try block must be followed by at least one of the following:
+
+A catch block to catch and handle exceptions.
+A finally block for code that should always be executed, whether or not an exception occurs.
+Both a catch block and a finally block.
+
+public class TryCatchFinallyExample {
+    public static void main(String[] args) {
+        try {
+            int result = divide(10, 0); // This will throw an ArithmeticException
+            System.out.println("Result: " + result); // This line will not be reached
+        } catch (ArithmeticException e) {
+            System.out.println("ArithmeticException caught: " + e.getMessage());
+        } finally {
+            System.out.println("Finally block executed.");
+        }
+    }
+
+    public static int divide(int numerator, int denominator) {
+        if (denominator == 0) {
+            throw new ArithmeticException("Division by zero is not allowed.");
+        }
+        return numerator / denominator;
+    }
+}
