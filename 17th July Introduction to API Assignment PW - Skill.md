@@ -1,5 +1,5 @@
 
-------------------------------------------- 17th July Introduction to API Assignment  ------------------------------------------------
+# 17th July Introduction to API Assignment  
 
 ===============================================================================================================================
 
@@ -7,8 +7,9 @@
 
 ===============================================================================================================================
 
-1. WAP to display current date and time in java?
+### 1. WAP to display current date and time in java?
 Sol:
+```java
 import java.time.*;
 
 public class dateTimeApi 
@@ -21,10 +22,12 @@ public class dateTimeApi
             System.out.println(time);
     }
 }
+```
 ===============================================================================================================================
 
-2. Write a program to convert a date to a string in the format "MM/dd/yyyy"?
+### 2. Write a program to convert a date to a string in the format "MM/dd/yyyy"?
 Sol:
+```java
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 public class dateFormat 
@@ -39,6 +42,7 @@ public class dateFormat
         System.out.println("Formatted Date: " + formattedDate);
     }    
 }
+```
 ==============================================================================================================================
 
 3. What is the difference between collections and streams?Explain with an Example?
@@ -55,6 +59,7 @@ Most collections are mutable, which means you can add, remove, or modify element
 Imperative Style: 
 You often use imperative code to work with collections, explicitly stating how to perform operations step by step.
 
+```java
 List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
 
 List<Integer> squaredNumbers = new ArrayList<>();
@@ -63,7 +68,7 @@ for (Integer num : numbers) {
 }
 
 System.out.println(squaredNumbers);
-
+```
 
 Streams:
 
@@ -75,7 +80,7 @@ Immutability:
 Streams themselves are generally immutable. They don't modify the source data but produce new streams or values.
 Functional Style: 
 You work with streams using a functional style, which involves defining what you want to do with the data rather than how to do it.
-
+```java
 List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
 
 List<Integer> squaredNumbers = numbers.stream()
@@ -83,14 +88,14 @@ List<Integer> squaredNumbers = numbers.stream()
     .collect(Collectors.toList());
 
 System.out.println(squaredNumbers);
-
+```
 
 ==============================================================================================================================================
 
-4. What is enums in java? explain with an example?
+### 4. What is enums in java? explain with an example?
 Ans:
 In Java, an enum (short for "enumeration") is a special data type that is used to define a set of constant values. These constant values represent a fixed set of elements, and you can use enums to create a more structured and self-documenting way of working with such values. Enums are often used when you have a limited, well-defined set of options or choices.
-
+```java
 public class enumDemo 
 {
     public enum DayOfWeek {
@@ -110,12 +115,13 @@ public class enumDemo
 
     }
 }
-
+```
 
 ===============================================================================================================================
 
-5. What are in built annotations in java?
+### 5. What are in built annotations in java?
 Ans:
+```
 @SuppressWarnings
 @FunctionalInterface
 @Retention
@@ -124,5 +130,5 @@ Ans:
 @Inherited
 @Override
 @Deprecated
-
+```
 ==============================================================================================================================================
