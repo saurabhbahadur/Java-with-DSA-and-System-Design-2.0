@@ -1,11 +1,9 @@
 
-------------------------------------------- 10th July Generics and File-handling Assignment  ------------------------------------------------
+# 10th July Generics and File-handling Assignment 
 
 ===============================================================================================================================
 
------------------------------------------------------------------ Generics Assignment --------------------------------------------------------------------------------------
-
-===============================================================================================================================
+## Generics Assignment 
 
 1. What are Generics in Java?
 Ans:
@@ -32,9 +30,10 @@ public class ClassName<T1, T2, ..., Tn> {
 
 ==============================================================================================================================================
 
-4. What is a Type Parameter in Java Generics?
+### 4. What is a Type Parameter in Java Generics?
 Ans:
 In Java Generics, a type parameter, often referred to as a type variable, is a placeholder for a specific data type that is not known until the generic class, interface, or method is instantiated or invoked. Type parameters are used to create generic classes, interfaces, and methods that can work with different data types while maintaining type safety and code reusability.
+```java
 public class Box<T> {
     private T value;
 
@@ -46,13 +45,14 @@ public class Box<T> {
         return value;
     }
 }
-
+```
 
 ===============================================================================================================================
 
-5. What is a Generic Method in Java?
+### 5. What is a Generic Method in Java?
 Ans:
 A generic method in Java is a method that is parameterized with one or more type parameters (also known as type variables). These type parameters act as placeholders for the actual data types that the method will operate on. Generic methods allow you to write methods that work with different data types while ensuring type safety and code reusability.
+```java
 public class GenericMethods {
     public static <T> void swap(T[] array, int index1, int index2) {
         if (index1 >= 0 && index1 < array.length && index2 >= 0 && index2 < array.length) {
@@ -71,7 +71,7 @@ public class GenericMethods {
         System.out.println("After swapping: " + Arrays.toString(integers));
     }
 }
-
+```
 
 ==============================================================================================================================================
 
@@ -98,12 +98,8 @@ ArrayList<Integer> intList = new ArrayList<Integer>();
 intList.add(42);           // Adding an Integer
 
 
-===============================================================================================================================
-
------------------------------------------------------------------ IO operation Assignment --------------------------------------------------------------------------------------
-
-===============================================================================================================================
-
+## IO operation Assignment
+ 
 1. What is Input and Output Stream in Java?
 Ans:
 Input Stream:
@@ -118,13 +114,14 @@ Output streams are typically used for operations like creating or writing to a f
 
 ==============================================================================================================================================
 
-2. What are the methods of OutputStream?
+### 2. What are the methods of OutputStream?
 Ans:
+```
 write() - writes the specified byte to the output streamO
 write(byte[] array) - writes the bytes from the specified array to the output streamO
 flush() - forces to write all data present in the output stream to the destinationO
 close() - closes the output streamP
-
+```
 ==============================================================================================================================================
 
 3. What is serialization in Java?
