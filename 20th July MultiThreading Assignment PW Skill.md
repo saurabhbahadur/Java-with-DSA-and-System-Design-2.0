@@ -1,7 +1,5 @@
 
-------------------------------------------- 20th July MultiThreading Assignment  ------------------------------------------------
-
-===============================================================================================================================
+# 20th July MultiThreading Assignment 
 
 -----------------------------------------------------------------20th July MultiThreading Assignment --------------------------------------------------------------------------------------
 
@@ -69,26 +67,26 @@ Extending the Thread Class:
 In this approach, you create a new class that extends the Thread class and override the run() method. The run() method contains the code that the thread will execute.
 This approach is useful when you want to define the entire behavior of the thread within the class itself.
 It provides a straightforward way to create threads but has the limitation that Java supports single inheritance, so if you extend Thread, your class cannot extend any other class.
-
+```java
 class MyThread extends Thread {
     public void run() {
         // Code to be executed by the thread
     }
 }
-
+```
 
 Implementing the Runnable Interface:
 
 In this approach, you create a class that implements the Runnable interface and provides an implementation for the run() method. The run() method contains the code to be executed by the thread.
 This approach is more flexible than extending Thread because you can implement multiple interfaces and extend other classes in your class.
 It is the recommended approach when you need to separate the task from the thread and promote better design practices.
-
+```java
 class MyRunnable implements Runnable {
     public void run() {
         // Code to be executed by the thread
     }
 }
-
+```
 
 ===============================================================================================================================
 
@@ -134,12 +132,12 @@ Processes are created by duplicating an existing process, which involves copying
 
 ==============================================================================================================================================
 
-6.How can we create daemon threads?
+### 6.How can we create daemon threads?
 Ans:
 In Java, you can create daemon threads by setting the daemon status of a thread using the setDaemon(true) method before starting the thread. Daemon threads are background threads that are automatically terminated when all user (non-daemon) threads have finished their execution. Daemon threads are typically used for tasks that should not prevent the Java program from exiting when all user threads have completed their work.
 
-Extending Thread Class:
-
+#### Extending Thread Class:
+```java
 class MyDaemonThread extends Thread {
     public void run() {
         // Thread's work here
@@ -153,10 +151,10 @@ public class Main {
         daemonThread.start();
     }
 }
+```
 
-
-Implementing Runnable Interface:
-
+#### Implementing Runnable Interface:
+```java
 class MyRunnableTask implements Runnable {
     public void run() {
         // Runnable task's work here
@@ -171,7 +169,7 @@ public class Main {
         daemonThread.start();
     }
 }
-
+```
 
 ==============================================================================================================================================
 
@@ -184,7 +182,7 @@ It is used for thread synchronization and coordination within a multi-threaded e
 When a thread calls wait(), it releases the lock on the object it's associated with and enters a "waiting" state. This allows other threads to access and modify the shared object or perform other synchronized actions.
 The thread remains in the "waiting" state until another thread notifies it by calling the notify() or notifyAll() method on the same object. The waiting thread will then reacquire the lock and proceed.
 wait() is typically used for inter-thread communication and coordination, where one thread needs to wait for some condition to be satisfied by another thread.
-
+```java
 synchronized (sharedObject) {
     // Check a condition
     if (conditionNotMet) {
@@ -198,7 +196,7 @@ synchronized (sharedObject) {
     // Perform work to meet the condition
     sharedObject.notify(); // Notify the waiting thread
 }
-
+```
 
 sleep() Method:
 
@@ -206,12 +204,12 @@ sleep() is a method provided by the Thread class in Java.
 It is used to pause the execution of the current thread for a specified amount of time, in milliseconds or nanoseconds.
 Unlike wait(), sleep() does not release any locks or monitor resources; the thread retains the locks it holds while sleeping.
 It is commonly used for introducing delays in a thread's execution, for implementing time-based actions, or for simulating real-time behavior in applications
-
+```java
 try {
     // Sleep for 1 second (1000 milliseconds)
     Thread.sleep(1000);
 } catch (InterruptedException e) {
     // Handle the exception, if necessary
 }
-
+```
 ==============================================================================================================================================
