@@ -1,22 +1,26 @@
 
-------------------------------------------- 19th June Inheritance, Polymorphism and Abstraction Assignment ------------------------------------------------
+# 19th June Inheritance, Polymorphism and Abstraction Assignment 
 
 
-1. What is Inheritance in Java?
-Ans:
-Inheritance is one of the fundamental concepts in object-oriented programming (OOP) and is a key feature of the Java programming language. Inheritance allows you to create a new class that is a modified version of an existing class. The new class, called a subclass or derived class, inherits attributes and behaviors (fields and methods) from an existing class, known as the superclass or base class.
+## 1. What is Inheritance in Java?
+```
+Inheritance is one of the fundamental concepts in object-oriented programming (OOP)
+and is a key feature of the Java programming language. Inheritance allows you to create
+a new class that is a modified version of an existing class. The new class, called a subclass
+ or derived class, inherits attributes and behaviors (fields and methods) from an existing class,
+ known as the superclass or base class.
+```
 
-===============================================================================================================================
 
-2. What is superclass and subclass?
-Ans:
-
-In object-oriented programming, a superclass and a subclass are related classes that are part of an inheritance hierarchy. These classes are used to implement the concept of inheritance, where the subclass inherits attributes and behaviors from the superclass. 
-
-==============================================================================================================================
-
-3. How is Inheritance implemented/achieved in Java?
-Ans: Using Extend keyword
+## 2. What is superclass and subclass?
+```
+In object-oriented programming, a superclass and a subclass are related classes that are part of an
+inheritance hierarchy. These classes are used to implement the concept of inheritance, where the subclass
+inherits attributes and behaviors from the superclass. 
+```
+# 3. How is Inheritance implemented/achieved in Java?
+```java
+// Using Extend keyword
 class Demo
 {
 
@@ -26,17 +30,17 @@ class Demo1 extends Demo
 {
 
 }
+```
+## 4. What is polymorphism?
+```
+Polymorphism is one of the core concepts in object-oriented programming (OOP) and is a fundamental principle
+in the Java programming language. It refers to the ability of different objects to respond to the same method
+or message in a way that is specific to their individual class. Polymorphism allows objects of different classes
+ to be treated as objects of a common superclass.
+```
 
-==============================================================================================================================================
-
-4. What is polymorphism?
-Ans:
-Polymorphism is one of the core concepts in object-oriented programming (OOP) and is a fundamental principle in the Java programming language. It refers to the ability of different objects to respond to the same method or message in a way that is specific to their individual class. Polymorphism allows objects of different classes to be treated as objects of a common superclass.
-
-============================================================================================================================================
-
-5. Differentiate between method overloading and method overriding.
-Ans:
+## 5. Differentiate between method overloading and method overriding.
+```
 Method Overloading:
 
 Method overloading, also known as compile-time polymorphism or static polymorphism, occurs when you define multiple methods in the same class with the same name but different parameters (either a different number of parameters or different types of parameters).
@@ -58,11 +62,15 @@ It is resolved at compile time.
 The methods must have the same name but different parameter lists.
 The return type can be different, but it's not considered when overloading.
 Overloading is used to provide multiple ways to perform the same operation based on the input parameters.
+```
 
-============================================================================================================================================
-
-6. What is an abstraction explained with an Example?
-Ans: Abstraction is one of the fundamental concepts in object-oriented programming (OOP) that allows you to create simplified models of real-world objects and systems. It involves focusing on the essential characteristics of an object while ignoring the irrelevant details.
+## 6. What is an abstraction explained with an Example?
+```
+Abstraction is one of the fundamental concepts in object-oriented programming (OOP) that allows you to create
+ simplified models of real-world objects and systems. It involves focusing on the essential characteristics of an
+object while ignoring the irrelevant details.
+```
+```java
 abstract class Vehicle {
     private String brand;
     private String model;
@@ -80,11 +88,11 @@ abstract class Vehicle {
         System.out.println("Model: " + model);
     }
 }
-
+```
 
 ==========================================================================================================================================
 
-7. What is the difference between an abstract method and final method in Java?Explain with an example?
+## 7. What is the difference between an abstract method and final method in Java?Explain with an example?
 Ans:
 Abstract Method:
 
@@ -96,7 +104,7 @@ Final Method:
 
 A final method is a method that is marked with the final keyword. It is a method in a class that cannot be overridden by any subclass.
 When you declare a method as final, it means that the method's implementation is sealed, and no subclass can change it by providing its own implementation.
-
+```java
 abstract class Shape {
     abstract double area(); // Abstract method
 
@@ -131,13 +139,14 @@ class Square extends Shape {
     }
     
 }
-
+```
 
 ===========================================================================================================================
 
-8. What is the final class in Java?
+## 8. What is the final class in Java?
 Ans:
 In Java, a final class is a class that cannot be subclassed or extended. When you declare a class as final, it means that it is the final implementation of that class, and it cannot have any subclasses. You typically use the final keyword to prevent inheritance and to ensure that the class remains unchanged and cannot be further specialized.
+```java
 final class MyFinalClass {
     private int value;
 
@@ -149,7 +158,7 @@ final class MyFinalClass {
         return value;
     }
 }
-
+```
 
 =============================================================================================================================
 
@@ -191,16 +200,16 @@ A class "Person" encapsulates data fields like "name" and "age" as private, and 
 
 ==============================================================================================================================================
 
-10. Difference between Runtime and compile time polymorphism explain with an example
+## 10. Difference between Runtime and compile time polymorphism explain with an example
 Ans:
 Compile-Time Polymorphism (Static Binding):
 
 Compile-Time Resolution: 
 Compile-time polymorphism is resolved during the compile phase, based on the method's signature (name and parameter list). It is also known as method overloading.
 
-Method Overloading: 
+### Method Overloading: 
 In method overloading, multiple methods with the same name but different parameter lists exist within the same class or a hierarchy of classes. The appropriate method to call is determined at compile time based on the method signature and the arguments provided.
-
+```java
 class Calculator {
     int add(int a, int b) {
         return a + b;
@@ -218,15 +227,15 @@ public class Main {
         double result2 = calculator.add(3.5, 2.7); // Calls the double version of the add method.
     }
 }
-
+```
 Runtime Polymorphism (Dynamic Binding):
 
 Runtime Resolution: 
 Runtime polymorphism is resolved during runtime, based on the actual object's type. It is also known as method overriding.
 
-Method Overriding: 
+### Method Overriding: 
 In method overriding, a subclass provides a specific implementation for a method that is already defined in its superclass. The method in the subclass must have the same name, return type, and parameter list (method signature) as the method in the superclass.
-
+```java
 class Shape {
     void draw() {
         System.out.println("Drawing a shape.");
@@ -246,7 +255,7 @@ public class Main {
         shape.draw(); // Calls the overridden draw method in the Circle class.
     }
 }
-
+```
 
 ==================================================================================================================
 
